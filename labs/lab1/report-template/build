@@ -1,0 +1,9 @@
+#!/usr/bin/bash
+
+pandoc report.md \
+--metadata-file=metadata.yaml \
+--include-in-header=preamble.tex \
+--top-level-division=section \
+--highlight-style=tango \
+--pdf-engine=pdflatex \
+-o durimmiziraj_lab1_dns.pdf
