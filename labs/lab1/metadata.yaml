@@ -1,0 +1,22 @@
+title: "Laboration 1 - DNS"
+author: "Durim Miziraj"
+date: '\DTMnow'
+
+lang: sv
+documentclass: report
+papersize: a4
+fontsize: 11pt
+
+toc: true
+toc-depth: 2
+
+geometry:
+  - left=31.5mm
+  - right=31.5mm
+  - top=35.6mm
+  - bottom=53.3mm
+
+fontfamily: libertine
+fontfamilyoptions:
+  - mono=false
+
