@@ -42,6 +42,14 @@ Characteristics of sine waves.
     - theta = Phase (The starting point of the wave in the cycle).
     - A = amplitude, the greatest distance from zero.
 
+Frequency and Wavelength produce similar changes to the appearance of the sinewave.
+The distinction comes when one takes the propagation speed into account.
+If the frequency of two sinewaves are identical, but the propagation speed is different,
+then then wavelength is also different.
+
+Identical frequency between two sinewaves produce identical wavelength only if the 
+propagation speed is identical.
+
 Many natural phenomena produce sinewaves, therefore is it is funcamental
 to signal processing.
 
@@ -191,7 +199,7 @@ A transition in the middle of the bit-period going from +5v to 0v corresponds to
     │+5v ┼┐ ┌─┐┌┐ ┌─┐┌┐┌┐┌┐ ┌─┐┌┐┌┐ ┌─┐ ┌─┐ ┌─┐┌┐ ┌┐┌─┐┌┐┌┐ ┌─┐┌┐ ┌┐┌─┐┌┐┌┐ ┌─┐┌┐ ┌┐┌┐┌┐┌  │
     │ 0v ┼└─┘ └┘└─┘ └┘└┘└┘└─┘ └┘└┘└─┘ └─┘ └─┘ └┘└─┘└┘ └┘└┘└─┘ └┘└─┘└┘ └┘└┘└─┘ └┘└─┘└┘└┘└┘  │
     │    │0 1 0 0 1 0 0 0│0 1 0 0 0 1 0 1│0 1 0 0 1 1 0 0│0 1 0 0 1 1 0 0│0 1 0 0 1 1 1 1│ │
-    │    │ │ │ │ H │ │ │ │ │ │ │ E │ │ │ │ │ │ │ L │ │ │ │ │ │ │ L │ │ │ │ │ │ │ L │ │ │ │ │
+    │    │ │ │ │ H │ │ │ │ │ │ │ E │ │ │ │ │ │ │ L │ │ │ │ │ │ │ L │ │ │ │ │ │ │ O │ │ │ │ │
     ┼────┼─┴─┴─┴─┴─┴─┴─┴─┼─┴─┴─┴─┴─┴─┴─┴─┼─┴─┴─┴─┴─┴─┴─┴─┼─┴─┴─┴─┴─┴─┴─┴─┼─┴─┴─┴─┴─┴─┴─┴─┼─┼
          │ 40 bit-periods                                                                  │
 
@@ -234,3 +242,27 @@ Test - Can I reconstruct the exact data?
     No  - Lossy
 
 Lossless may use a 'dictionary' to assign symbols to long repeating patterns.
+
+# Pulse code modulation (PCM)
+
+Two basic properties.
+
+    - Sampling rate
+        The average amount of samples taken in a second.
+        The samples are used to produce bits.
+
+    - Bit depth
+        The number of bits in each sample.
+        Signals using lossy compression do not have bit depths.
+
+# Delta modulation (DM)
+
+Increments/decrements the approximation of the analog signal by 1.
+
+    Upsides.
+    - Can take more samples per second.
+    
+    Downsides.
+    - A corrupted bit can corrupt all subsequent bits.
+
+
