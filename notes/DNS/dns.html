@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Reading List</title>
+  <style>
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Reading List</h1>
+</header>
+<h1 id="domain-name-system-dns-notes">Domain Name System (DNS)
+notes</h1>
+<pre><code>The Domain Name System maps domain names (www.google.com) to information such 
+as IP-addresses (142.251.142.238).
+
+The service works on the application layer.
+
+The use case is to have human-memorable addresses instead of generic
+IP-addresses.</code></pre>
+<h2
+id="there-are-several-dns-servers-at-different-network-layers.">There
+are several DNS servers at different network layers.</h2>
+<pre><code>- The local computer may have a local resolver and cache. On my Ubuntu 
+  system, systemd-resolved listens at 127.0.0.53 .
+- The router may forward DNS queries from devices on the home network and 
+  may cache answers.
+- The Internet Service Provider has one.
+- Authoritative DNS servers hold the DNS records for particular domains 
+  and provide answers to resolvers.</code></pre>
+<h2 id="name-resolution-note">Name resolution note:</h2>
+<pre><code>Entering the address &#39;http://example.com/page&#39; does not send the whole 
+string to the DNS server. Only &#39;example.com&#39; needs resolution.
+The rest (&#39;/page&#39;) is used as a http request.</code></pre>
+<h2 id="hierarchical-structure---domains-and-zones.">Hierarchical
+structure - Domains and Zones.</h2>
+<pre><code>+------------+       -
+|root domain |       : root domain
+|     .      |       :
++------------+       -
+|      |  |  |       : Top level domains
++----+ |  |  |       :
+|.com| |  |  |       :
++----+ |  |  +----+  :
+       |  |  |.net|  :
+  +----+  |  +----+  :
+  |.org|  |          :
+  +----+  +----+     :
+  |       |.se |     :
+  |       +----+     -
+  |                  : ZONE CNAME                    
+  +----------------+ :
+  |en.wikipedia.org| :
+  +----------------+ -
+
+www.hkr.se
+^   ^   `- Top level domain
+|   `- Domain name
+`- Computer name - HTTP server in this case.
+
+Thirteen root servers spread across the world.
+They keep the top level domains (.com, .net, .org ...)</code></pre>
+<h1 id="recursive-question.">Recursive question.</h1>
+<pre><code>User runs: resolvectl query www.hkr.se
+
+1. resolvectl asks the local systemd-resolved service to resolve the name.
+2. systemd-resolved checks whether it already has an answer cached.
+3. If it needs an external answer, it sends DNS queries for address records
+   (A for IPv4 and AAAA for IPv6) to its configured upstream DNS server.
+4. On your previously shown setup, that upstream server was your router,
+   192.168.0.1. The router may answer from its cache or forward the question
+   to another resolver, such as one operated by your ISP.
+5. The recursive resolver obtains an answer, potentially consulting the
+   DNS hierarchy, and returns it along the chain.
+6. systemd-resolved returns the address to resolvectl.</code></pre>
+<h1 id="iterative-question">Iterative question</h1>
+<pre><code>1. Can you give me the address to &#39;www.hkr.se&#39;?
+2. Possible answwers:
+    - yes
+    - no
+    - Check with ...</code></pre>
+<h1 id="iterative-resolution-of-an-a-record-for-www.hkr.se">Iterative
+resolution of an A record for www.hkr.se</h1>
+<pre><code>1. Resolver → root server:
+   &quot;What is the A record for www.hkr.se?&quot;
+   Root → resolver:
+   &quot;Ask the name servers for .se.&quot;          [referral]
+
+2. Resolver → .se name server:
+   &quot;What is the A record for www.hkr.se?&quot;
+   .se → resolver:
+   &quot;Ask the name servers for hkr.se.&quot;        [referral]
+
+3. Resolver → hkr.se authoritative server:
+   &quot;What is the A record for www.hkr.se?&quot;
+   Server → resolver:
+   &quot;Here is the answer.&quot;                     [answer]
+
+The record may be cached, so it maybe doesnt need to ask the question.</code></pre>
+<h1 id="caching-in-dns-servers">Caching in DNS servers</h1>
+</body>
+</html>
