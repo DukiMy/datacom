@@ -1,0 +1,293 @@
+# Annotated metadata for Pandoc's default standalone HTML5 output.
+# Keep this file beside notes.md. Run from that directory:
+# pandoc notes.md --standalone --embed-resources \
+#   --metadata-file=metadata.yaml -o /var/www/dukimy/index.html
+#
+# Optional settings are commented out. Uncomment only what you need.
+# Use top-level keys here: do not wrap everything inside "metadata:".
+# Pandoc accepts custom keys, but they need a template/filter/writer to use them.
+
+# PAGE IDENTITY
+title: "Notes on Computer Networking"
+pagetitle: "Notes on Computer Networking | dukimy.com"
+# subtitle: "Notes on computer networking"
+author:
+  - "Durim Miziraj"
+lang: en-GB
+dir: ltr
+description: "A collection of notes from what I've leared about computer networking."
+keywords:
+  - Computer networks
+
+# title is a visible page heading; pagetitle is the browser-tab title.
+# Omit title and keep pagetitle if you do not want Pandoc's title block.
+# In the default HTML5 template, subtitle/author/date/abstract appear within
+# that title block and therefore also require title.
+# A prefix adds "dukimy.com - ..." to the browser title (using an en dash).
+# title-prefix: "dukimy.com"
+
+# abstract: |
+#   A short overview of the page. Markdown **formatting** is supported.
+# abstract-title: "Overview"
+
+# Overrides for HTML head metadata, independent of the visible title block.
+# Normally derived from author, date, and description.
+# author-meta:
+#   - "Durim"
+# date-meta: "2026-09-30"
+# description-meta: "A separate description for the HTML head."
+# title-meta is useful for some other outputs; use pagetitle for HTML <title>.
+
+# DEFAULT HTML STYLING
+# These require the default styles.html partial or a compatible template.
+# Keep document-css true to retain Pandoc's main built-in stylesheet.
+document-css: true
+# mainfont: "system-ui, sans-serif"
+monofont: "ui-monospace, monospace"
+# fontsize: "18px"
+linestretch: 1.6
+maxwidth: "60rem"
+fontcolor: "#222222"
+backgroundcolor: "#ffffff"
+linkcolor: "#145da0"
+monobackgroundcolor: "#ffffff"
+
+# In the default HTML stylesheet these set body padding, despite their names.
+# Its responsive rules may adjust padding on small screens.
+margin-left: "2rem"
+margin-right: "2rem"
+margin-top: "2rem"
+margin-bottom: "2rem"
+
+# Naming a font does not install or download it for visitors.
+# Quote hexadecimal colours: an unquoted # starts a YAML comment.
+
+# NEWER HTML TEMPLATE SETTINGS
+# These appear in the current Pandoc manual but are absent from the default
+# Pandoc 3.1.3 styles.html used to validate this example. Check your template.
+# quotecolor: "#555555"
+# quotebordercolor: "#cccccc"
+# fontcolordark: "#eeeeee"
+# backgroundcolordark: "#181818"
+# linkcolordark: "#9ecbff"
+# quotecolordark: "#bbbbbb"
+# quotebordercolordark: "#666666"
+# monobackgroundcolordark: "#292929"
+
+# CONTENTS HEADING
+# This changes the heading only. Add --toc to the command to generate a TOC.
+toc-title: "Table of Contents"
+
+# EXTRA STYLESHEETS
+# Files must exist and be reachable when Pandoc builds the page.
+# With --embed-resources their content can be incorporated into the HTML.
+# document-css: true above keeps the built-in styling as well.
+# css:
+#   - "style.css"
+#   - "print.css"
+
+# EXTRA HTML HEAD CONTENT
+# Values below are actual content, not filenames.
+# For a file instead, use --include-in-header=header.html on the command line.
+header-includes:
+  - |
+    <link rel="icon" type="image/png" href="/var/www/dukimy/favicon.png">
+#
+# # Code block
+#   - |
+#     <style>
+#       pre {
+#         display: block;
+#         box-sizing: border-box;
+#         max-width: 100%;
+#         overflow-x: auto;
+#         padding: 1em;
+#         background-color: #ffffff;
+#         border-radius: 6px;
+#         font-size: 16px;
+#         line-height: 1;
+#         text-align: left;
+#       }
+#
+#       pre,
+#       pre code {
+#         font-family: ui-monospace, "DejaVu Sans Mono",
+#                      Menlo, Consolas, monospace;
+#         white-space: pre;
+#         overflow-wrap: normal;
+#         word-break: normal;
+#         font-variant-ligatures: none;
+#       }
+#
+#       pre code {
+#         font-size: inherit;
+#         line-height: inherit;
+#       }
+#
+#       figure {
+#         margin-left: 0;
+#         margin-right: 0;
+#         text-align: center;
+#       }
+#
+#       figure pre {
+#         width: fit-content;
+#         margin-left: auto;
+#         margin-right: auto;
+#       }
+#
+#       figcaption,
+#       pre[data-caption]::after {
+#         margin-top: 0.5em;
+#         white-space: normal;
+#         font: 0.9rem/1.4 sans-serif;
+#         color: #666;
+#         text-align: center;
+#       }
+#
+#       pre[data-caption]::after {
+#         content: attr(data-caption);
+#         display: block;
+#       }
+#
+#       @font-face {
+#         font-family: "Diagram Mono";
+#         src: url("resources/fonts/DejaVuSansMono.ttf")
+#              format("truetype");
+#         font-weight: 400;
+#         font-style: normal;
+#       }
+#
+#       pre,
+#       pre code {
+#         font-family: "Diagram Mono", monospace;
+#         font-variant-ligatures: none;
+#         letter-spacing: 0;
+#         white-space: pre;
+#       }
+#     </style>
+
+  - |
+    <style>
+      .center-table {
+        overflow-x: auto;
+      }
+
+      .center-table table {
+        display: table;
+        width: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    </style>
+
+  - |
+    <style>
+      img { max-width: 100%; height: auto; }
+      figcaption { font-size: 0.9em; }
+    </style>
+
+  - |
+    <link rel="canonical" href="https://dukimy.com/">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Transmission modes">
+
+# CONTENT BEFORE / AFTER THE DOCUMENT
+# These metadata values are parsed as Markdown.
+# include-before:
+#   - "[Home](https://dukimy.com/)"
+# include-after:
+#   - "*Notes by Durim.*"
+
+# CITATIONS AND BIBLIOGRAPHIES
+# Add --citeproc to the build command to process citations.
+# Keep external bibliography/CSL files beside the project, or supply paths.
+# bibliography:
+#   - "references.bib"
+# csl: "citation-style.csl"
+# citation-style is an alias for csl; there is no need to set both.
+# citation-abbreviations: "abbreviations.json"
+# reference-section-title: "References"
+# link-citations: true
+# link-bibliography: true
+# suppress-bibliography: false
+# notes-after-punctuation: true
+
+# Include every bibliography entry, even when not cited in the document:
+# nocite: "@*"
+# Or include selected otherwise-uncited entries:
+# nocite: "@sample-notes, @another-reference"
+
+# Inline CSL reference data can be used instead of, or with, bibliography.
+# This is a fictional example. Cite it in Markdown as [@sample-notes].
+# references:
+#   - id: sample-notes
+#     type: manuscript
+#     title: "Example networking notes"
+#     author:
+#       - literal: "Example Author"
+#     issued:
+#       date-parts:
+#         - [2026, 9, 30]
+
+# CUSTOM METADATA
+# These are valid keys, but have no automatic effect in the default HTML5
+# template. A custom template or Lua filter must read and use them.
+# site-name: "dukimy.com"
+# footer-text: "My networking notebook"
+# tags:
+#   - networking
+# draft: false
+# A custom template can access a field with, for example, $site-name$.
+
+# OTHER OUTPUT FORMATS
+# These are examples for other writers/templates, not HTML styling options.
+# Check the documentation for the format/engine you actually choose.
+#
+# Document properties in formats such as DOCX/PDF/EPUB (support varies):
+# subject: "Computer networking"
+# category: "Study notes"
+# title-meta: "Transmission modes"
+#
+# LaTeX/PDF examples:
+# documentclass: article
+# classoption:
+#   - oneside
+# papersize: a4
+# geometry:
+#   - margin=25mm
+# colorlinks: true
+#
+# EPUB examples:
+# publisher: "Example Publisher"
+# rights: "Copyright 2026 Example Author"
+#
+# Reveal.js / Beamer slides use additional fields such as theme and institute.
+# Do not expect theme to select a theme for an ordinary HTML5 web page.
+
+# BUILD OPTIONS BELONG IN THE COMMAND OR A SEPARATE DEFAULTS FILE
+# Examples: standalone, embed-resources, toc, toc-depth, number-sections,
+# citeproc, output-file, resource-path, template, filters, and pdf-engine.
+# Putting those names in this metadata file does not activate their options.
+# In particular, toc: true here is not a substitute for the --toc option.
+# To use a defaults YAML file, load it with --defaults=defaults.yaml instead.
+
+# YAML / PRECEDENCE NOTES
+# Use real booleans (true / false), not the strings "true" / "false".
+# Quote dates to keep them as strings. Lists use an indented dash per item.
+# Use | followed by indented lines for multiline text.
+# Do not define the same key twice: edit its existing value instead.
+# Document metadata and --metadata/-M values override --metadata-file values.
+# Later --metadata-file arguments override earlier metadata files.
+
+# INSPECT YOUR INSTALLED VERSION
+# pandoc --version
+# pandoc --print-default-template=html5
+# pandoc --print-default-data-file=templates/styles.html
+# The two template commands show variables in the main template and its CSS
+# partial. Citation processing and filters can consume additional fields.
+#
+# Official references:
+# https://pandoc.org/MANUAL.html#variables
+# https://pandoc.org/MANUAL.html#citations
+# https://github.com/jgm/pandoc-templates/blob/master/default.html5

@@ -1,0 +1,8 @@
+#!/usr/bin/bash
+pandoc notes.md \
+  --standalone \
+  --embed-resources \
+  --metadata-file=metadata.yaml \
+  --toc \
+  --toc-depth=3 \
+  -o /var/www/dukimy/transmission-modes/index.html

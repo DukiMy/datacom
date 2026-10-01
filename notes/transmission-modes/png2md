@@ -1,0 +1,20 @@
+#!/bin/bash
+#          Date:         Sat May 16 01:58:30 AM CEST 2026
+#          Name:         Durim Miziraj
+# ---------------------------------------------------------------------
+#   1. Takes a png image from the clipboard.
+#   2. Saves the image at at a relative path.
+#   3. Saves the md image link to the clipboard.
+#
+#   USAGE
+#       ./png2md <filename> <"alt text"> 
+
+filename="${1:-no_name}"
+alt_text="${2:-}"
+path="./resources/img/$filename.png"
+
+wl-paste --type image/png > "$path"
+echo "![$alt_text]($path)" | wl-copy --type text/plain
+echo "![$alt_text]($path)"
+echo "The markdown image link was saved to clipboard!"
+
