@@ -1,8 +1,8 @@
-#!/usr/bin/bash
-pandoc notes.md \
+#!/usr/bin/env bash
+pandoc /home/durim/Education/hkr-uni/datacom/notes/transmission-modes/notes.md \
   --standalone \
   --embed-resources \
-  --metadata-file=metadata.yaml \
+  --metadata-file=/home/durim/Education/hkr-uni/datacom/notes/transmission-modes/metadata.yaml \
   --toc \
   --toc-depth=3 \
   -o /var/www/dukimy/transmission-modes/index.html

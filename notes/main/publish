@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-pandoc notes.md \
-  --standalone \
-  --embed-resources \
-  --metadata-file=metadata.yaml \
-  -o /var/www/dukimy/index.html

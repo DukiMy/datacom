@@ -1,8 +1,8 @@
-#!/usr/bin/bash
-pandoc notes.md \
+#!/usr/bin/env bash
+pandoc /home/durim/Education/hkr-uni/datacom/notes/channelization/notes.md \
   --standalone \
   --embed-resources \
-  --metadata-file=metadata.yaml \
+  --metadata-file=/home/durim/Education/hkr-uni/datacom/notes/channelization/metadata.yaml \
   --toc \
   --toc-depth=3 \
   -o /var/www/dukimy/channelization/index.html

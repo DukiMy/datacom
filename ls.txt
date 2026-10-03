@@ -1,0 +1,10 @@
+total 456
+  4 drwxrwxr-x  7 durim durim   4096 Oct  2 18:45 .
+  4 drwxrwxr-x  4 durim durim   4096 Aug 17 21:40 ..
+  4 drwxrwxr-x  8 durim durim   4096 Oct  1 21:22 .git
+424 -rw-rw-r--  1 durim durim 431053 Sep 25 13:52 Lab_router_switch_DA541A.pdf
+  4 drwxrwxr-x  3 durim durim   4096 Sep 28 10:47 labs
+  4 -rwxrw-rw-  1 durim durim    182 Oct  2 18:45 master-publish
+  4 drwxrwxr-x  2 durim durim   4096 Aug 17 21:43 mocklab
+  4 drwxrwxr-x 11 durim durim   4096 Oct  1 13:11 notes
+  4 drwxrwxr-x  3 durim durim   4096 Aug 18 12:07 tutorials

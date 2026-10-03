@@ -154,7 +154,7 @@ header-includes:
 
       @font-face {
         font-family: "Diagram Mono";
-        src: url("resources/fonts/DejaVuSansMono.ttf")
+        src: url("/home/durim/Education/hkr-uni/datacom/notes/channelization/resources/fonts/DejaVuSansMono.ttf")
              format("truetype");
         font-weight: 400;
         font-style: normal;

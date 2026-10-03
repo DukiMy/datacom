@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+# Channelization
+/home/durim/Education/hkr-uni/datacom/notes/channelization/publish
+
+# Transmission modes
+/home/durim/Education/hkr-uni/datacom/notes/transmission-modes/publish
+
+# Just add the path to the publish script.

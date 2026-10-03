@@ -26,7 +26,7 @@ Most serial circuits need a chip that converts data in paralell mode to data in 
 A set of bytes and a set of bits can be sent in orders that are independent of eachother.
 A system that orders its data by its most significant bit first is called "_big endian_", and "_little endian_" for data ordered by its least significant bit first. 
 
-![Fig. 1: Visualisation of bit and byte order.](./resources/img/msb_lsb.png)
+![Fig. 1: Visualisation of bit and byte order.](/home/durim/Education/hkr-uni/datacom/notes/transmission-modes/resources/img/msb_lsb.png)
 
 Byte order can be in little endian while bit order can be in big endian for the same piece of data. The important thing is that both communicating systems agree on how to order the data.
 
