@@ -1,6 +1,0 @@
-#!/usr/bin/bash
-
-pandoc reading_lst.md \
- -o reading_list.pdf \
- --pdf-engine=xelatex \
- -V mainfont="DejaVu Sans"
